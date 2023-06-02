@@ -1,0 +1,60 @@
+{
+	"info": {
+		"_postman_id": "46a112a5-2b34-4a8a-a754-5bb1ba639481",
+		"name": "digitalocean-space-upload2",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "15849599"
+	},
+	"item": [
+		{
+			"name": "upload file",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "file",
+							"type": "file",
+							"src": "/Users/brain/Pictures/people/marvelous/2023.png"
+						}
+					]
+				},
+				"url": {
+					"raw": "localhost:3001/upload?file_name=marvs_photo&acl=public-read&content_type=image%2Fjpeg",
+					"host": [
+						"localhost"
+					],
+					"port": "3001",
+					"path": [
+						"upload"
+					],
+					"query": [
+						{
+							"key": "file_name",
+							"value": "marvs_photo"
+						},
+						{
+							"key": "acl",
+							"value": "public-read"
+						},
+						{
+							"key": "content_type",
+							"value": "image%2Fjpeg"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "download file",
+			"request": {
+				"method": "GET",
+				"header": []
+			},
+			"response": []
+		}
+	]
+}
